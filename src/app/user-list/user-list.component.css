@@ -1,0 +1,30 @@
+.btn-group-vertical.special {
+    display: flex;
+}
+  
+.special .btn {
+    flex: 1;
+    padding: 10px;
+    border: 5px solid whitesmoke;
+    border-radius: 10px;
+    font-weight: 700;
+    background-color: rgb(18, 19, 31);
+}
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+  }
+  /* Zebra striping */
+  tr:nth-of-type(odd) { 
+    background: #eee; 
+  }
+  th { 
+    background: #333; 
+    color: white; 
+    font-weight: bold; 
+  }
+  td, th { 
+    padding: 6px; 
+    border: 1px solid #ccc; 
+    text-align: left; 
+  }

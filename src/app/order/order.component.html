@@ -1,0 +1,91 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4" style="float: left;">
+            <div class="btn-group-vertical special">
+                <button style="background-color: lightpink; color:black"type="button" class="btn "><a routerLink="/orders" style="text-decoration: none; color: inherit;">Reservation</a></button>
+                <button style="background-color: lightpink; color:black" type="button" class="btn "><a routerLink="/details" style="text-decoration: none; color: inherit;">Details</a></button>
+                <button style="background-color: lightpink; color:black" type="button" class="btn ">Cancel Room</button>
+                <button style="background-color: lightpink; color:black"  type="button" class="btn ">Logout</button>
+            </div>
+            <br><br>
+            <h4 style="text-align: center;font-size: 1.5rem; font-weight: 700;"></h4><br>
+            <div class="col-md-11" style="background-color: white;color: whitesmoke;">
+                <div class="row" style="border-bottom: 2px solid white; padding: 10px;">
+                  
+                </div>
+                <div class="row" style="border-bottom: 2px solid white; padding: 10px;">
+                   
+                </div>
+                <div class="row" style="border-bottom: 2px solid white; padding: 10px;">
+                   
+                </div>
+                <div class="row" style="border-bottom: 2px solid white; padding: 10px;">
+                   
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <h4 style="text-align: center;font-size: 2rem; font-weight: 700;">Reserve Room</h4>
+           
+            <form #reserve="ngForm" (ngSubmit)="OnSubmit()" style="color: black;">
+
+                <div class="form-group">
+                    <label for="roomname">Room Type</label>
+                    <select [(ngModel)]="order.roomname" name="roomname" id="roomname" class="form-control" type="text">
+                        <option *ngFor="let room of rooms" [value]="room">
+                          {{room}}
+                        </option>
+                    </select>
+                  </div>
+                <div class="form-group">
+                    <label for="days">Number of Days</label>
+                    <input type="text" name="days"class="form-control" id="days" required [(ngModel)]="order.days">
+                </div>
+                <div class="form-group">
+                    <label for="startdate">Pick Start Date</label>
+                    <input type="date" name="startdate"class="form-control" id="startdate" required [(ngModel)]="order.startdate">
+                </div>
+                <div class="form-group">
+                    <label for="num">Number of Rooms</label>
+                    <input type="text" name="num"class="form-control" id="num" required [(ngModel)]="order.num">
+                </div>
+                <div class="form-group">
+                    <label for="ppl">Number of Persons</label>
+                    <input type="text" name="ppl"class="form-control" id="ppl" required [(ngModel)]="order.ppl">
+                </div>
+                <div class="form-group">
+                    <label for="food">Food Service</label>
+                    <select [(ngModel)]="order.food" name="food" id="food" class="form-control" type="text">
+                        <option *ngFor="let ch of check" [value]="ch">
+                          {{ch}}
+                        </option>
+                    </select>
+                  </div>
+                <button type="submit" class="btn btn-primary btn-block" (click)="OnSubmit()">Reserve</button>
+            </form>
+        </div>
+        <div class="col-md-3" style="float: right;">
+            <div class="row">
+                <div class="text-center">
+               
+              
+            </div><br>
+            <div class="row" style="float: right;">
+                
+            </div>
+            <div class="row"></div><br>
+            <div class="row" style="float: right;">
+                
+            </div>
+            <div class="row"></div>
+            <div class="row" style="float: right;">
+               
+            </div>
+            <div class="row"></div>
+            <div class="row" style="float: right;">
+               
+            </div><br><br><br>
+        </div>
+
+    </div>
+</div>

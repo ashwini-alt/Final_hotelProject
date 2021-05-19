@@ -1,0 +1,12 @@
+.btn-group-vertical.special {
+    display: flex;
+}
+  
+.special .btn {
+    flex: 1;
+    padding: 10px;
+    border: 5px solid whitesmoke;
+    border-radius: 10px;
+    font-weight: 700;
+    background-color: rgb(18, 19, 31);
+}

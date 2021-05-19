@@ -1,0 +1,35 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3" style="float: left;">
+            <div class="btn-group-vertical special">
+                <button type="button" class="btn btn-secondary"><a routerLink="/booking" style="text-decoration: none; color: inherit;">Bookings</a></button>
+                <button type="button" class="btn btn-secondary"><a routerLink="/users" style="text-decoration: none; color: inherit;">User List</a></button>
+                <button type="button" class="btn btn-secondary"><a routerLink="/balance" style="text-decoration: none; color: inherit;">Balance</a></button>
+                <button type="button" class="btn btn-secondary">Logout</button>
+            </div>
+        </div>
+        <div class="col-md-9" style="float: right;">
+            <h2 style="text-align: center; font-weight: 500;">Admin Balance</h2><br>
+            <h4 style="text-align: center;font-size: 1.5rem;font-weight: 600;">Balance : </h4><h4 style="text-align: center;font-size: 1.5rem;">{{balance}}</h4><br>
+            <div class="card my-3"> 
+                <div class="card-body">
+                    <h4 style="text-align: center;font-size: 1.5rem;font-weight: 600;">History</h4>
+                  <table class="table table-bordered table-striped">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th scope="col">User Name</th>
+                        <th scope="col">Money Transferred</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let order of orders">
+                        <td>{{ order.username }}</td>
+                        <td>{{ order.price }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>

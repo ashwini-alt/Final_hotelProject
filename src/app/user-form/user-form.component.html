@@ -1,0 +1,101 @@
+<button type="button" class="btn btn-danger" style="float: right; background-color: lightgreen;"><a routerLink="/login" style="text-decoration: none; color: inherit;">Login to your Account</a></button><br><br>
+<h2 style="text-align: center;">Registration Form</h2><br>
+
+<div class="container">
+  <div class="row">
+  <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" [(ngModel)]="user.name" 
+            class="form-control" 
+            id="name" 
+            name="name" 
+            placeholder="Enter your name"
+            required #name="ngModel">
+            
+        </div>
+        <div class="form-group">
+            <label for="email">EmailID</label>
+            <input type="text" [(ngModel)]="user.email" 
+              class="form-control" 
+              id="email" 
+              name="email" 
+              placeholder="Enter your EmailID"
+              required #email="ngModel">
+            
+          </div>
+        
+        <div class="form-group">
+          <label for="passowrd">Password</label>
+          <input type="text" [(ngModel)]="user.password" 
+            class="form-control" 
+            id="password" 
+            name="password" 
+            placeholder="Enter Password"
+            required #password="ngModel">
+        
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="text" [(ngModel)]="user.phone" 
+              class="form-control" 
+              id="phone" 
+              name="phone" 
+              placeholder="Enter Phone Number"
+              required #phone="ngModel">
+           
+          </div>
+
+        <!-->  <div class="form-group">
+            <label for="card">Debit/Credit Card</label>
+            <input type="text" [(ngModel)]="user.card" 
+              class="form-control" 
+              id="card" 
+              name="card" 
+              placeholder="Enter Card No"
+              required #card="ngModel">
+           
+          </div> -->
+
+          <div class="form-group">
+            <label for="addres">Address</label>
+            <input type="text" [(ngModel)]="user.addres" 
+              class="form-control" 
+              id="addres" 
+              name="addres" 
+              placeholder="Enter your Address"
+              required #addres="ngModel">
+           
+          </div>
+
+          <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" [(ngModel)]="user.city" 
+              class="form-control" 
+              id="city" 
+              name="city" 
+              placeholder="Enter City"
+              required #city="ngModel">
+         
+          </div>
+
+          <div class="form-group">
+            <label for="state">State</label>
+            <input type="text" [(ngModel)]="user.state" 
+              class="form-control" 
+              id="state" 
+              name="state" 
+              placeholder="Enter State"
+              required #state="ngModel">
+          
+          </div>
+        <button type="submit" [disabled]="!userForm.form.valid" 
+          class="btn btn-info btn-block">Submit</button>
+      </form>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+</div>

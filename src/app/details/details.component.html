@@ -1,0 +1,56 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3" style="float: left;">
+            <div class="btn-group-vertical special">
+                <button  style="background-color: lightpink; color:black" type="button" class="btn "><a routerLink="/orders" style="text-decoration: none; color: inherit;">Reservation</a></button>
+                <button  style="background-color: lightpink; color:black"type="button" class="btn btn-secondary"><a routerLink="/details" style="text-decoration: none; color: inherit;">Details</a></button>
+                <button  style="background-color: lightpink; color:black"type="button" class="btn btn-secondary" (click)="roomDelete()">Cancel Room</button>
+                <button style="background-color: lightpink; color:black"type="button" class="btn btn-secondary">Logout</button>
+            </div>
+        </div>
+        <div class="col-md-9" style="float: right;">
+            <div class="card my-3"> 
+                <div class="card-body">
+                  <table class="table table-bordered table-striped">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th scope="col">User Name</th>
+                        <th scope="col">Registered Time</th>
+                        <th scope="col">Room ID</th>
+                        <th scope="col">Room Name</th>
+                        <th scope="col">No of days</th>
+                        <th scope="col">Start Date</th>
+                        <th scope="col">No of Rooms</th>
+                        <th scope="col">No of People</th>
+                        <th scope="col">Food Service</th>
+                        <th scope="col">Total Amount</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let obj of objs">
+                        <td>{{ obj.username }}</td>
+                        <td>{{ obj.curdate }} </td>
+                        <td>{{ obj.oid }}</td>
+                        <td>{{ obj.roomname }}</td>
+                        <td>{{ obj.days }}</td>
+                        <td>{{ obj.startdate }}</td>
+                        <td>{{ obj.num }}</td>
+                        <td>{{ obj.ppl }}</td>
+                        <td>{{ obj.food }}</td>
+                        <td>{{ obj.price }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="text-center">
+                    <h4 style="text-align: center;font-size: 1.1rem;">Click here to cancel the Reserved Room!</h4>
+                    <button (click)="roomDelete()" class="btn btn-danger">Cancel Booking</button><br><br>  
+                </div>
+                <br><p>{{del}}</p><br>
+              </div><br>
+        </div>
+    </div>
+</div>

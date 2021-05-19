@@ -1,0 +1,48 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3" style="float: left;">
+            <div class="btn-group-vertical special">
+                <button type="button" class="btn btn-secondary"><a routerLink="/booking" style="text-decoration: none; color: inherit;">Bookings</a></button>
+                <button type="button" class="btn btn-secondary"><a routerLink="/users" style="text-decoration: none; color: inherit;">User List</a></button>
+                <button type="button" class="btn btn-secondary"><a routerLink="/balance" style="text-decoration: none; color: inherit;">Balance</a></button>
+                <button type="button" class="btn btn-secondary">Logout</button>
+            </div>
+        </div>
+        <div class="col-md-9" style="float: right;">
+            <div class="card my-3"> 
+                <div class="card-body">
+                  <table class="table table-bordered table-striped">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th scope="col">User Name</th>
+                        <th scope="col">Registered Time</th>
+                        <th scope="col">Room ID</th>
+                        <th scope="col">Room Name</th>
+                        <th scope="col">No of days</th>
+                        <th scope="col">Start Date</th>
+                        <th scope="col">No of Rooms</th>
+                        <th scope="col">No of People</th>
+                        <th scope="col">Food Service</th>
+                        <th scope="col">Total Amount</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let order of orders">
+                        <td>{{ order.username }}</td>
+                        <td>{{ order.curdate }}</td>
+                        <td>{{ order.oid }}</td>
+                        <td>{{ order.roomname }}</td>
+                        <td>{{ order.days }}</td>
+                        <td>{{ order.startdate }}</td>
+                        <td>{{ order.num }}</td>
+                        <td>{{ order.ppl }}</td>
+                        <td>{{ order.food }}</td>
+                        <td>{{ order.price }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-md-3" style="float: left;">
+          <div class="btn-group-vertical special">
+              <button type="button" class="btn btn-secondary"><a routerLink="/booking" style="text-decoration: none; color: inherit;">Bookings</a></button>
+              <button type="button" class="btn btn-secondary"><a routerLink="/users" style="text-decoration: none; color: inherit;">User List</a></button>
+              <button type="button" class="btn btn-secondary"><a routerLink="/balance" style="text-decoration: none; color: inherit;">Balance</a></button>
+              <button type="button" class="btn btn-secondary">Logout</button>
+          </div>
+      </div>
+      <div class="col-md-9" style="float: right;">
+        <div class="card my-3"> 
+          <div class="card-body">
+            <table class="table table-bordered table-striped">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Password</th>
+                  <th scope="col">Phone</th>
+                  <th scope="col">Card</th>
+                  <th scope="col">Address</th>
+                  <th scope="col">City</th>
+                  <th scope="col">State</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let user of users">
+                  <td>{{ user.name }}</td>
+                  <td>{{ user.email }}</td>
+                  <td>{{ user.password }}</td>
+                  <td>{{ user.phone }}</td>
+                  <td>{{ user.card }}</td>
+                  <td>{{ user.addres }}</td>
+                  <td>{{ user.city }}</td>
+                  <td>{{ user.state }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
